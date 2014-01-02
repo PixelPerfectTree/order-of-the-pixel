@@ -21,9 +21,9 @@ configure :development, :test, :production do
 end
 
 # Live Postgres for Heroku (Production):
-DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_AMBER_URL'] || 'postgres://localhost/mydb')
+#DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_AMBER_URL'] || 'postgres://localhost/mydb')
 # Local SQlite Locally (Development):
-# DataMapper.setup(:default, "sqlite::memory:")
+DataMapper.setup(:default, "sqlite::memory:")
 
 
 # Main classes for the order of the pixel API.
@@ -302,6 +302,9 @@ namespace '/api/v1' do
     content_type 'application/json'
     headers["X-CSRF-Token"] = session[:csrf] ||= SecureRandom.hex(32)
     # To allow Cross Domain XHR
-    headers["Access-Control-Allow-Origin"] ||= request.env["HTTP_ORIGIN"] 
+    if request.env["HTTP_ORIGIN"]
+    headers["Access-Control-Allow-Origin"] ||= request.env["HTTP_ORIGIN"]
+    end
+     
   end
 end
