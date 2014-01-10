@@ -82,7 +82,7 @@ Here is an example request that will create a **Hero**.
 
 * Tests can be run using the Rake task `rake test`.
 
-* To run the Sinatra app simply install the dependencias via bundler and run the server from the root using `ruby app.rb`. 
+* To run the Sinatra app simply install the dependencies via bundler and run the server from the root using `ruby app.rb`. 
 
 Destroy, update and show actions are available by specifiying the entity's ID at the end (ie: http://order-of-the-pixel.herokuapp.com/api/v1/weapons/1).
 
