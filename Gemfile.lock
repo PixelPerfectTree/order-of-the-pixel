@@ -4,6 +4,7 @@ GEM
     addressable (2.3.5)
     backports (3.3.5)
     bcrypt-ruby (3.1.2)
+    bcrypt-ruby (3.1.2-x86-mingw32)
     columnize (0.3.6)
     data_mapper (1.2.0)
       dm-aggregates (~> 1.2.0)
@@ -62,7 +63,11 @@ GEM
       dm-core (~> 1.2.0)
     do_postgres (0.10.13)
       data_objects (= 0.10.13)
+    do_postgres (0.10.13-x86-mingw32)
+      data_objects (= 0.10.13)
     do_sqlite3 (0.10.13)
+      data_objects (= 0.10.13)
+    do_sqlite3 (0.10.13-x86-mingw32)
       data_objects (= 0.10.13)
     fastercsv (1.5.5)
     haml (4.0.4)
@@ -71,8 +76,6 @@ GEM
     json_pure (1.8.1)
     minitest (5.2.0)
     multi_json (1.8.2)
-    puma (2.7.1)
-      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -97,6 +100,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   data_mapper
@@ -107,7 +111,6 @@ DEPENDENCIES
   json
   minitest (~> 5.0)
   multi_json
-  puma
   rack-test (~> 0.6.1)
   sinatra
   sinatra-contrib
